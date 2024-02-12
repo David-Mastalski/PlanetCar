@@ -1,0 +1,150 @@
+//Base
+@use "../base/typography" as *;
+@use "../base/colors" as *;
+//Utils
+@use "../utils/mixins" as *;
+
+.cs-navbar {
+  font-family: $hero-font;
+  padding: 30px 24px 20px 14px;
+  width: 100%;
+  z-index: 110;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  &.static-navbar {
+    background-color: $site-background-color;
+    position: static;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: $extra-bold-font-weight;
+  text-transform: uppercase;
+  letter-spacing: -0.0075em;
+  position: relative;
+
+  &.subpages-mode {
+    color: #000;
+  }
+}
+
+.cs-header-element {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mobile-change-mode-btn,
+.desktop-change-mode-btn {
+  input {
+    display: none;
+    visibility: hidden;
+    width: 0;
+  }
+}
+
+.change-mode-icon {
+  color: #fff;
+}
+
+.change-mode-icon.subpages-mode {
+  color: $main-font-color;
+}
+
+.mobile-change-mode-btn {
+  label {
+    font-size: 1.7rem;
+  }
+  .mobile-moon-icon {
+    display: none;
+  }
+  input:checked + label .mobile-moon-icon {
+    display: block;
+  }
+  input:checked + label .mobile-sun-icon {
+    display: none;
+  }
+}
+
+.desktop-change-mode-btn {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 6px;
+
+  input:checked ~ label::before {
+    left: 17px;
+  }
+
+  label {
+    background-color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    width: 27px;
+    height: 12px;
+    position: relative;
+
+    &::before {
+      background-color: #000;
+      border-radius: 100%;
+      content: "";
+      height: 8px;
+      width: 8px;
+      transition: left 0.3s;
+
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      transform: translateY(-50%);
+    }
+
+    &.subpages-mode {
+      background-color: $main-font-color;
+
+      &::before {
+        background-color: $change-mode-switch-color;
+      }
+    }
+  }
+  .desktop-change-mode-icon {
+    font-size: 1.3rem;
+  }
+}
+
+.hero-social-media {
+  display: none;
+  margin-left: 30px;
+
+  &__iteam {
+    @include centerElement();
+    color: #fff;
+    font-size: 1.7rem;
+    height: 30px;
+    margin: 2px;
+    padding: 5px;
+    width: 30px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #c8cccf;
+    }
+
+    &.subpages-mode {
+      color: $main-font-color;
+
+      &:hover {
+        color: $btn-hover-effect;
+      }
+    }
+  }
+}

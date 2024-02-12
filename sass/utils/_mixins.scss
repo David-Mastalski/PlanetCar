@@ -1,0 +1,9 @@
+@mixin centerElementY(){
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin centerElement(){
+    align-items: center;
+    justify-content: center;
+}

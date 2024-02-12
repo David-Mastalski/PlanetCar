@@ -1,0 +1,319 @@
+//Base
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+//Utils
+@use "../utils/mixins" as *;
+
+.max-entry-width {
+  max-width: 600px;
+}
+
+.back-video {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+.hero {
+  color: #fff;
+  height: 82vh;
+  margin-bottom: 24px;
+  font-family: $hero-font;
+  width: 100%;
+  padding: 0 24px 64px 24px;
+  overflow-x: hidden;
+  position: relative;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  .small {
+    background-color: $very-light-grey;
+    border-radius: 3px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    &-heading {
+      font-size: 2.4rem;
+      font-weight: $regular-font-weight;
+      line-height: 1.15;
+      padding-top: 16px;
+
+      span {
+        font-weight: $semi-bold-font-weight;
+      }
+    }
+
+    &-post-meta {
+      font-size: 1.1rem;
+      font-weight: $regular-font-weight;
+      margin-top: 30px;
+
+      @include centerElementY();
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.meta-icon {
+  color: #fff;
+  margin-right: 4px;
+  font-size: 1.1rem;
+
+  &.hero-sc-icon {
+    font-size: 1.4rem;
+    margin-right: 3px;
+  }
+}
+
+.meta-transactions,
+.meta-social-media {
+  margin-left: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+  }
+}
+
+//Main
+.section {
+  &__inner {
+    &-header {
+      margin-bottom: 42px;
+      padding-top: 10px;
+    }
+  }
+  &-title {
+    font-family: $hero-font;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  &-main-content {
+    padding: 0 24px;
+  }
+  &-heading {
+    line-height: 1;
+    // font-family: $main-font;
+    font-size: 22px;
+    font-weight: $regular-font-weight;
+    margin: 5px 0 20px 0;
+  }
+}
+
+.best-offer-section {
+  margin-bottom: 70px;
+}
+
+#more-car-input {
+  display: none;
+  visibility: hidden;
+}
+
+.best-offers-container {
+  display: grid;
+  grid-template-columns: 100%;
+
+  &__row {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 33px;
+  }
+}
+
+.best-offer-text-container {
+  .text-element {
+    margin-bottom: 20px;
+  }
+}
+
+.more-offers {
+  display: none;
+}
+
+.show-more-offers {
+  display: grid;
+}
+
+.best-offer-tile {
+  font-family: $main-font;
+  font-weight: $regular-font-weight;
+  width: 100%;
+
+  &__img {
+    aspect-ratio: 342/192;
+  }
+  &__main {
+    margin-top: 20px;
+    padding: 0 15px;
+
+    &-title {
+      font-size: 1.9rem;
+    }
+    &-car-info {
+      margin-top: 15px;
+    }
+    &-price {
+      font-size: 1.6rem;
+      margin-top: 25px;
+      span {
+        background-color: $price-background-color;
+        border-radius: 4px;
+        color: $price-color;
+        padding: 6px 10px;
+      }
+    }
+  }
+}
+
+.short-car-info {
+  list-style-type: none;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    color: $best-offer-car-short-info-color;
+    font-size: 1.3rem;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 25px;
+
+      &::before {
+        background-color: $best-offer-car-short-info-separator-color;
+        content: "";
+        height: 2px;
+        width: 9px;
+        position: absolute;
+        top: 50%;
+        left: -16px;
+      }
+    }
+  }
+}
+
+.more-btn-container {
+  display: none;
+  margin-top: 20px;
+  @include centerElement();
+
+  label {
+    text-align: center;
+  }
+}
+
+//AboutUs
+.grid-layout-element {
+  display: grid;
+}
+
+.company-describe-text {
+  margin-bottom: 20px;
+}
+
+.check-offer-btn {
+  font-size: 1.5rem;
+}
+
+.space-inner-element {
+  width: 100%;
+  height: 42px;
+}
+
+.column-what-we-offer {
+  background-color: $background-extra-color;
+  padding: 35px 24px;
+
+  &__white-space {
+    width: 100%;
+    height: 20px;
+  }
+  h4 {
+    font-size: 1.8rem;
+    font-weight: $regular-font-weight;
+  }
+  .text-element {
+    margin-top: 6px;
+  }
+}
+
+.column-img-wrap {
+  display: none;
+}
+
+//Skills
+.skills-container {
+  padding: 50px 0;
+}
+
+.skill {
+  text-align: center;
+  position: relative;
+
+  &__number {
+    color: $skill-number-color;
+    font-weight: 600;
+    font-size: 7.2rem;
+  }
+  &__name {
+    color: $main-font-color;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+}
+
+//Contact Section
+.contact-section {
+  margin-bottom: 50px;
+
+  .text-element {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 20px;
+
+  &__wrapper {
+    padding: 0 24px;
+  }
+}
+
+.contact-btn {
+  border-bottom-color: rgb(102, 184, 59);
+  font-size: 1.5rem;
+}
+
+//Financing Section
+.financing-wrapper {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 20px;
+}

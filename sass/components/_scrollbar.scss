@@ -1,0 +1,19 @@
+@use "../base/colors" as *;
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $site-background-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #414141;
+  border: 3px solid $site-background-color;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ababab;
+}

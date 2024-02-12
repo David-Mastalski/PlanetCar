@@ -1,0 +1,56 @@
+@use "../base/colors" as *;
+
+.footer {
+  margin-top: 50px;
+  width: 100%;
+
+  &__inner {
+    color: $footer-color;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+  }
+
+  &__social-media {
+    gap: 20px;
+
+    li a {
+      border-radius: 50%;
+      border: 1px solid $main-font-color;
+      color: $main-font-color;
+      display: block;
+      width: 35px;
+      height: 35px;
+      font-size: 1.4rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__nav {
+    gap: 30px;
+
+    li a {
+      color: $main-font-color;
+      font-size: 1.2rem;
+    }
+
+    li:hover a {
+      color: rgb(156, 156, 156);
+    }
+  }
+  &__copy-right {
+    color: $main-font-color;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}

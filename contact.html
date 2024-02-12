@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PlanetCar to renomowany komis samochodowy, który oferuje szeroki wybór wysokiej jakości pojazdów używanych. Nasza firma działa na rynku motoryzacyjnym od wielu lat i zyskała zaufanie klientów dzięki uczciwości, profesjonalizmowi i doskonałej obsłudze"
+    />
+    <title>Kontakt - PlanetCar</title>
+    <link rel="icon" href="img/favicon.ico.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,700&family=Lexend+Deca&family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5e7b60bd46.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="cs-navbar subpages-navbar">
+      <div class="cs-page-container">
+        <a href="index.html" class="back-button">
+          <i class="fa-solid fa-angle-left"></i>
+          Powrót
+        </a>
+      </div>
+    </section>
+    <main>
+      <section class="section section-padding contact-hero">
+        <div class="cs-page-container">
+          <h1 class="section-heading">
+            Potrzebujesz pomocy? Czekamy na Twoją wiadomość – jesteśmy tu dla
+            Ciebie!
+          </h1>
+        </div>
+      </section>
+      <section class="contact-grid">
+        <form action="./php/submit_form.php" method="POST" class="form">
+          <div class="form__row">
+            <div class="input-container">
+              <p class="input-title">Imię: <span>*</span></p>
+              <input type="text" name="name" required />
+              <span class="focus-line"></span>
+            </div>
+            <div class="input-container">
+              <p class="input-title">Nazwisko: <span>*</span></p>
+              <input type="text" name="last-name" required />
+              <span class="focus-line"></span>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="input-container">
+              <p class="input-title">E-mail: <span>*</span></p>
+              <input type="email" name="email" required />
+              <span class="focus-line"></span>
+            </div>
+            <div class="input-container">
+              <p class="input-title">Telefon:</p>
+              <input type="number" name="phone" />
+              <span class="focus-line"></span>
+            </div>
+          </div>
+          <div>
+            <div class="input-container">
+              <p class="input-title">Wiadomość: <span>*</span></p>
+              <textarea cols="1" name="message" required></textarea>
+              <span class="focus-line"></span>
+            </div>
+          </div>
+          <div class="form__row--rodo">
+            <div class="rodo-container">
+              <input type="checkbox" id="rodo" required />
+              <label for="rodo" class="checkbox"
+                ><i class="fa-solid fa-check"></i
+              ></label>
+              <p class="rodo-content">
+                Wyrażam zgodę na przetwarzanie moich danych osobowych w celach
+                (*WYMAGANE)
+              </p>
+            </div>
+            <div>
+              <button type="submit" class="submitBtn" disabled>
+                Wyślij Wiadomość
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="contact-details">
+          <div class="contact-details--row">
+            <p class="contact-details--title">Lokalizacja</p>
+            <p class="contact-details--info">STADŁA 242 33-386 Podegrodzie</p>
+          </div>
+          <div class="contact-details--row">
+            <p class="contact-details--title">Zadzwoń do nas</p>
+            <p class="contact-details--info">+48 600 530 900</p>
+          </div>
+          <div class="contact-details--row">
+            <p class="contact-details--title">Godziny pracy</p>
+            <p class="contact-details--info">Pon.-pt: 9:00 - 17:00</p>
+            <p class="contact-details--info">Sobota: 9:00 - 15:00</p>
+            <p class="contact-details--info">Niedziela: Zamknięte</p>
+          </div>
+          <div class="contact-details--row">
+            <p class="contact-details--title">Nasz e-mail</p>
+            <p class="contact-details--info">planetcar@vp.pl</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10346.063658864918!2d20.6141434!3d49.5880197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473dfaac1818f4bb%3A0x817e399867dd7f53!2sAuto%20Komis%20PLANETCAR%20Import%20Samochod%C3%B3w!5e0!3m2!1spl!2spl!4v1704490712714!5m2!1spl!2spl"
+          width="100%"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+    <footer class="footer section-padding">
+      <div class="cs-page-container">
+        <div class="footer__inner">
+          <ul class="footer__social-media">
+            <li>
+              <a
+                href="https://www.facebook.com/PlanetCarAutokomis"
+                aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/planet__car/"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UC3eY2yiQ1nnhC4vsOIXH46w/videos"
+                aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@planetcar" aria-label="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+          </ul>
+          <ul class="footer__nav">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="https://planet-car.otomoto.pl/inventory">Oferta</a>
+            </li>
+            <li>
+              <a href="./financing.html">Finansowanie</a>
+            </li>
+            <li>
+              <a href="./contact.html">Kontakt</a>
+            </li>
+          </ul>
+          <div class="footer__copy-right">
+            <p>
+              Copyright &copy
+              <span class="footer__currentYear">2024</span> PLANETCAR
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/form.js"></script>
+  </body>
+</html>

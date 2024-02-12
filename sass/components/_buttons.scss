@@ -1,0 +1,42 @@
+//Base
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+
+.main-btn-design {
+  color: $main-font-color;
+  cursor: pointer;
+  border-bottom: 2px solid $main-font-color;
+  font-size: 1.2rem;
+  font-family: $main-font;
+  padding: 2px 3px;
+}
+
+.financing-btn {
+  background-color: rgb(102, 184, 59);
+  color: white;
+  font-size: 1.5rem;
+  padding: 6px 23px;
+}
+
+.contact-nav-btn {
+  background-color: $main-font-color;
+  color: $site-background-color;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: $semi-bold-font-weight;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.submit-btn {
+  background-color: $main-font-color;
+  border: none;
+  color: $site-background-color;
+  cursor: pointer;
+  font-family: $hero-font;
+  padding: 12px 25px;
+  width: 100%;
+  transition: all 0.3s;
+}

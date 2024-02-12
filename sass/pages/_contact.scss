@@ -1,0 +1,137 @@
+//Base
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+
+.contact-hero {
+  margin: 40px 0 60px;
+}
+
+.form {
+  padding: 0 25px;
+
+  &__row {
+    padding: 5px 0;
+
+    &--rodo {
+      padding: 5px 0;
+    }
+  }
+}
+
+.input-container {
+  margin-bottom: 15px;
+  position: relative;
+
+  input,
+  textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(110, 110, 110);
+    color: $main-font-color;
+    font-size: 1.4rem;
+
+    padding: 10px 0px;
+    outline: none;
+    width: 100%;
+
+    &:focus + .focus-line {
+      width: 100%;
+    }
+
+    &:-webkit-autofill,
+    &-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+
+  .focus-line {
+    background-color: #fff;
+    height: 2px;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.input-title {
+  color: rgb(110, 110, 110);
+  font-size: 1.3rem;
+  font-weight: $light-font-weight;
+  margin-bottom: 5px;
+
+  span {
+    color: red;
+  }
+}
+
+.rodo-container {
+  display: flex;
+  align-items: center;
+
+  input {
+    display: none;
+    visibility: hidden;
+  }
+
+  input:checked + .checkbox {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .checkbox {
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin-right: 15px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+}
+
+.rodo-content {
+  color: rgb(110, 110, 110);
+}
+
+.submitBtn {
+  cursor: pointer;
+  font-family: $main-font;
+  font-weight: $semi-bold-font-weight;
+  padding: 8px 12px;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  letter-spacing: 1px;
+}
+
+.contact-details {
+  background-color: $background-extra-color;
+  padding: 60px 24px;
+  font-weight: $light-font-weight;
+
+  &--row:not(:last-child) {
+    margin-bottom: 35px;
+  }
+  &--title {
+    color: rgb(97, 97, 97);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &--info {
+    font-size: 1.8rem;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  width: 100%;
+  row-gap: 60px;
+}
